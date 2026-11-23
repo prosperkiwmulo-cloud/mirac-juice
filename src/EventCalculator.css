@@ -1,0 +1,235 @@
+﻿.event-calculator {
+  padding: 100px 8%;
+  background: #f7f5ec;
+  color: #173d2b;
+}
+
+.event-calculator-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.event-calculator-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 48px;
+}
+
+.event-calculator-heading .eyebrow {
+  color: #658b3f;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.event-calculator-heading h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  margin: 12px 0;
+}
+
+.event-calculator-heading h2 span {
+  color: #c28b2c;
+}
+
+.event-calculator-heading p {
+  color: #68766a;
+  line-height: 1.7;
+}
+
+.event-calculator-layout {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.event-calculator-controls,
+.event-estimate {
+  border-radius: 22px;
+  padding: 32px;
+  background: #fff;
+  box-shadow: 0 15px 45px rgba(24, 57, 38, 0.07);
+}
+
+.calculator-field {
+  margin-bottom: 28px;
+}
+
+.calculator-field:last-child {
+  margin-bottom: 0;
+}
+
+.calculator-field label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #173d2b;
+}
+
+.calculator-field input {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #d9e1d5;
+  border-radius: 11px;
+  padding: 15px 16px;
+  font: inherit;
+  font-size: 17px;
+  color: #173d2b;
+  background: #fbfcf9;
+  outline: none;
+}
+
+.calculator-field input:focus {
+  border-color: #56834c;
+  box-shadow: 0 0 0 3px rgba(86, 131, 76, 0.12);
+}
+
+.calculator-field small {
+  display: block;
+  margin-top: 9px;
+  color: #778477;
+  line-height: 1.5;
+}
+
+.calculator-tier-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+}
+
+.calculator-tier {
+  border: 1px solid #dce4d8;
+  border-radius: 12px;
+  padding: 14px 9px;
+  background: #fbfcf9;
+  color: #244b32;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.calculator-tier span {
+  display: block;
+  margin-top: 6px;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #7a897b;
+}
+
+.calculator-tier:hover,
+.calculator-tier.selected {
+  border-color: #477c43;
+  background: #edf5e9;
+  box-shadow: inset 0 0 0 1px #477c43;
+}
+
+.event-estimate {
+  background: #173d2b;
+  color: #fff;
+}
+
+.estimate-kicker {
+  color: #c9df8d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.estimate-total {
+  margin-top: 13px;
+  color: #fff;
+  font-size: clamp(27px, 3vw, 37px);
+  font-weight: 800;
+  overflow-wrap: anywhere;
+}
+
+.estimate-subtitle {
+  margin: 9px 0 25px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.estimate-breakdown {
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
+  padding-top: 14px;
+}
+
+.estimate-breakdown > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 13px;
+}
+
+.estimate-breakdown span {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.estimate-breakdown strong {
+  text-align: right;
+  color: #fff;
+}
+
+.calculator-whatsapp {
+  display: block;
+  margin-top: 25px;
+  padding: 16px 18px;
+  border-radius: 999px;
+  background: #d5e99b;
+  color: #173d2b;
+  text-decoration: none;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  transition: 0.2s ease;
+}
+
+.calculator-whatsapp:hover {
+  background: #e5f5bd;
+  transform: translateY(-2px);
+}
+
+.estimate-disclaimer {
+  margin: 17px 0 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+  .event-calculator {
+    padding: 75px 6%;
+  }
+
+  .event-calculator-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .event-calculator-controls,
+  .event-estimate {
+    padding: 25px 21px;
+  }
+}
+
+@media (max-width: 420px) {
+  .calculator-tier-options {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-tier {
+    text-align: left;
+    padding: 13px 15px;
+  }
+
+  .calculator-tier span {
+    display: inline;
+    margin-left: 8px;
+  }
+}
