@@ -1,5 +1,6 @@
-﻿import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
+import './Experience.css'
 import EventCalculator from './EventCalculator'
 
 interface Product {
@@ -17,175 +18,19 @@ interface Product {
 }
 
 const products: Product[] = [
-  {
-    name: 'Mango Juice',
-    number: '01',
-    image: '/images/Juice%20bottles%206.jpeg',
-    alt: 'Mirac Juice chilled bottled Mango Juice',
-    imagePosition: 'center 38%',
-    isAuthentic: true,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #fff3d1 0%, #fae2a5 100%)',
-      accent: '#c97718',
-      border: '#ebd399',
-    },
-  },
-  {
-    name: 'Passion Juice',
-    number: '02',
-    isAuthentic: false,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #fff5e4 0%, #fadfb0 100%)',
-      accent: '#b86b1f',
-      border: '#eed19c',
-    },
-  },
-  {
-    name: 'Milk Meld',
-    number: '03',
-    image: '/images/Juice%20bottles%202.jpeg',
-    alt: 'Mirac Juice bottled Milk Meld collection',
-    imagePosition: 'center 35%',
-    isAuthentic: true,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #fdfbf7 0%, #f4ebd6 100%)',
-      accent: '#8c763b',
-      border: '#e6dac0',
-    },
-  },
-  {
-    name: 'Soursop Juice',
-    number: '04',
-    isAuthentic: false,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #f7f9f4 0%, #e6efe0 100%)',
-      accent: '#3b6e47',
-      border: '#d4e3cb',
-    },
-  },
-  {
-    name: 'Mango Passion Mix',
-    number: '05',
-    isAuthentic: false,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #fff4e8 0%, #fcdbb9 100%)',
-      accent: '#d4651e',
-      border: '#f9cc9f',
-    },
-  },
-  {
-    name: 'Mango Tangerine Passion',
-    number: '06',
-    isAuthentic: false,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #fff2e6 0%, #fed2aa 100%)',
-      accent: '#dc5e18',
-      border: '#f8c495',
-    },
-  },
-  {
-    name: 'Mango Beetroot',
-    number: '07',
-    image: '/images/Juice%20in%20glasses%20and%20jugs%201.jpeg',
-    alt: 'Mirac Juice signature layered Mango Beetroot creation',
-    imagePosition: 'center 52%',
-    isAuthentic: true,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #fcf0f2 0%, #f7cdd6 100%)',
-      accent: '#9a2444',
-      border: '#eeb2c0',
-    },
-  },
-  {
-    name: 'Coconut Mango Mix',
-    number: '08',
-    isAuthentic: false,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #fefcf7 0%, #f4e7d1 100%)',
-      accent: '#99742e',
-      border: '#e7d6b7',
-    },
-  },
-  {
-    name: 'Pineapple Mint',
-    number: '09',
-    isAuthentic: false,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #f4f8f2 0%, #d8ebd0 100%)',
-      accent: '#357147',
-      border: '#c8e2bd',
-    },
-  },
-  {
-    name: 'Guava Lemon',
-    number: '10',
-    isAuthentic: false,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #fff1f2 0%, #fcd4d8 100%)',
-      accent: '#bd495b',
-      border: '#f6bcc3',
-    },
-  },
-  {
-    name: 'Orange Tangerine Ginger',
-    number: '11',
-    isAuthentic: false,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #fff3ea 0%, #fed4b4 100%)',
-      accent: '#d85514',
-      border: '#f9c298',
-    },
-  },
-  {
-    name: 'Avocado Coconut',
-    number: '12',
-    isAuthentic: false,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #f5f8f3 0%, #ddecdb 100%)',
-      accent: '#47693e',
-      border: '#cbdec6',
-    },
-  },
-  {
-    name: 'Hibiscus Juice',
-    number: '13',
-    isAuthentic: false,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #fdf1f4 0%, #f8cbda 100%)',
-      accent: '#942238',
-      border: '#eab0bf',
-    },
-  },
-  {
-    name: 'Beetroot Plain',
-    number: '14',
-    isAuthentic: false,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #fcf0f3 0%, #f4c8d5 100%)',
-      accent: '#7b193d',
-      border: '#e7acc0',
-    },
-  },
-  {
-    name: 'Detox Juice',
-    number: '15',
-    isAuthentic: false,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #f2f7f3 0%, #d5e6d6 100%)',
-      accent: '#205c36',
-      border: '#bed8c2',
-    },
-  },
-  {
-    name: 'Dragon Fruit Juice',
-    number: '16',
-    isAuthentic: false,
-    palette: {
-      bg: 'radial-gradient(circle at 50% 45%, #fdf1f6 0%, #f9cde2 100%)',
-      accent: '#b81f66',
-      border: '#f0b4d2',
-    },
-  },
+  { name: 'Beetroot Juice', number: '01', image: '/PRODUCTS/beetroot-juice.png', alt: 'Mirac Beetroot Juice', isAuthentic: true, palette: { bg: '#f4c8d5', accent: '#7b193d', border: '#e7acc0' } },
+  { name: 'Dragon Fruit Juice', number: '02', image: '/PRODUCTS/dragon-fruit-juice.png', alt: 'Mirac Dragon Fruit Juice', isAuthentic: true, palette: { bg: '#f9cde2', accent: '#b81f66', border: '#f0b4d2' } },
+  { name: 'Green Detox Juice', number: '03', image: '/PRODUCTS/green-detox-juice.png', alt: 'Mirac Green Detox Juice', isAuthentic: true, palette: { bg: '#d5e6d6', accent: '#205c36', border: '#bed8c2' } },
+  { name: 'Hibiscus Juice', number: '04', image: '/PRODUCTS/hibiscus-juice.png', alt: 'Mirac Hibiscus Juice', isAuthentic: true, palette: { bg: '#f8cbda', accent: '#942238', border: '#eab0bf' } },
+  { name: 'Mango Coconut Juice', number: '05', image: '/PRODUCTS/mango-coconut-juice.png', alt: 'Mirac Mango Coconut Juice', isAuthentic: true, palette: { bg: '#fae2a5', accent: '#c97718', border: '#ebd399' } },
+  { name: 'Mango Juice', number: '06', image: '/PRODUCTS/mango-juice.png', alt: 'Mirac Mango Juice', isAuthentic: true, palette: { bg: '#fae2a5', accent: '#c97718', border: '#ebd399' } },
+  { name: 'Mulondo Juice', number: '07', image: '/PRODUCTS/mulondo-juice.jpg', alt: 'Mirac Mulondo Juice', isAuthentic: true, palette: { bg: '#f4e7d1', accent: '#99742e', border: '#e7d6b7' } },
+  { name: 'Orange Juice', number: '08', image: '/PRODUCTS/orange-juice.png', alt: 'Mirac Orange Juice', isAuthentic: true, palette: { bg: '#fed4b4', accent: '#d85514', border: '#f9c298' } },
+  { name: 'Passion Fruit Juice', number: '09', image: '/PRODUCTS/passion-fruit-juice.png', alt: 'Mirac Passion Fruit Juice', isAuthentic: true, palette: { bg: '#fadfb0', accent: '#b86b1f', border: '#eed19c' } },
+  { name: 'Pineapple & Mint Juice', number: '10', image: '/PRODUCTS/pineapple-mint-juice.png', alt: 'Mirac Pineapple and Mint Juice', isAuthentic: true, palette: { bg: '#d8ebd0', accent: '#357147', border: '#c8e2bd' } },
+  { name: 'Red Detox Juice', number: '11', image: '/PRODUCTS/red-detox-juice.png', alt: 'Mirac Red Detox Juice', isAuthentic: true, palette: { bg: '#f4c8d5', accent: '#7b193d', border: '#e7acc0' } },
+  { name: 'Soursop Juice', number: '12', image: '/PRODUCTS/soursop-juice.png', alt: 'Mirac Soursop Juice', isAuthentic: true, palette: { bg: '#e6efe0', accent: '#3b6e47', border: '#d4e3cb' } },
+  { name: 'Watermelon Juice', number: '13', image: '/PRODUCTS/watermelon-juice.png', alt: 'Mirac Watermelon Juice', isAuthentic: true, palette: { bg: '#fcd4d8', accent: '#bd495b', border: '#f6bcc3' } },
 ]
 
 function BotanicalEmblem({ accent }: { accent: string }) {
@@ -255,70 +100,160 @@ interface ShowcaseSlide {
 const showcaseSlides: ShowcaseSlide[] = [
   {
     id: 'mango-juice',
-    kicker: '01 · SIGNATURE SELECTION',
+    kicker: '01 Â· SIGNATURE SELECTION',
     titleLine1: 'Sun-Ripened',
     titleLine2: 'Mango Nectar.',
     name: 'Pure Mango Juice',
     description:
       'Chilled fresh mango juice prepared with tropical mangoes for a naturally sweet, velvet-smooth and revitalizing fruit experience.',
-    provenance: 'Bottled fresh daily · Served chilled',
+    provenance: 'Bottled fresh daily Â· Served chilled',
     image: '/images/Juice%20bottles%206.jpeg',
     alt: 'Chilled bottle of Mirac Mango Juice held fresh in hand with natural condensation',
     whatsappMessage: 'Hello Mirac Juice, I would like to order the Mango Juice.',
   },
   {
     id: 'milk-meld',
-    kicker: '02 · HOUSE SPECIALTY',
+    kicker: '02 Â· HOUSE SPECIALTY',
     titleLine1: 'The Celebrated',
     titleLine2: 'Mirac Milk Meld.',
     name: 'Mirac Milk Meld',
     description:
       'Our beloved signature house creation, carefully blended for an exceptionally creamy, velvety texture and wholesome tropical sweetness.',
-    provenance: 'Signature house recipe · Bottled fresh',
+    provenance: 'Signature house recipe Â· Bottled fresh',
     image: '/images/Juice%20bottles%202.jpeg',
     alt: 'Three bottles of authentic Mirac Milk Meld on display',
     whatsappMessage: 'Hello Mirac Juice, I would like to order the Mirac Milk Meld.',
   },
   {
     id: 'mango-beetroot',
-    kicker: '03 · ARTISANAL DUO',
+    kicker: '03 Â· ARTISANAL DUO',
     titleLine1: 'Artisanal Layered',
     titleLine2: 'Mango & Beetroot.',
     name: 'Layered Mango Beetroot',
     description:
       'A striking visual and flavour duo, layering fresh earthy beetroot beneath smooth, sweet mango smoothie for a vibrant fruit lift.',
-    provenance: 'Hand-layered specialty · Prepared to order',
+    provenance: 'Hand-layered specialty Â· Prepared to order',
     image: '/images/Juice%20in%20glasses%20and%20jugs%201.jpeg',
     alt: 'Two-tone layered mango and beetroot drink in takeaway cup with pitcher',
     whatsappMessage: 'Hello Mirac Juice, I would like to order the Layered Mango Beetroot.',
   },
   {
     id: 'citrus-harvest',
-    kicker: '04 · FARM FRESH',
+    kicker: '04 Â· FARM FRESH',
     titleLine1: 'Sun-Drenched',
     titleLine2: 'Citrus Harvest.',
     name: 'Citrus Harvest',
     description:
       'Chilled citrus juice prepared from ripe oranges and citrus fruits, bringing bright, crisp zest and natural sunshine to every bottle.',
-    provenance: 'Whole ripe citrus fruits · Refreshing zest',
+    provenance: 'Whole ripe citrus fruits Â· Refreshing zest',
     image: '/images/Juice%20in%20glasses%20and%20jugs.jpeg',
     alt: 'Chilled bottle of Mirac citrus juice resting on vibrant green grass surrounded by oranges',
     whatsappMessage: 'Hello Mirac Juice, I would like to order the Citrus Harvest.',
   },
   {
     id: 'bottle-collection',
-    kicker: '05 · BOTTLE LINEUP',
+    kicker: '05 Â· BOTTLE LINEUP',
     titleLine1: 'Freshly Bottled.',
     titleLine2: 'Made to Share.',
     name: 'The Mirac Collection',
     description:
       'From daily breakfast refreshment to catering setups, explore our range of freshly prepared juices bottled daily for any occasion.',
-    provenance: '16 approved varieties · Dispensers & bottles',
+    provenance: '16 approved varieties Â· Dispensers & bottles',
     image: '/images/Juice%20bottles%201.jpeg',
     alt: 'Trio of authentic colourful Mirac Juice bottles on display',
     whatsappMessage: 'Hello Mirac Juice, I would like to enquire about ordering juice bottles.',
   },
 ]
+
+function MiracExperience() {
+  const videos = [
+    { title: 'The Mirac Introduction', file: 'INTRODUCTION SET UP.mp4' },
+    { title: 'The Main Smoky Setup', file: 'MAIN SMOKY.mp4' },
+    { title: 'The Mirac Setup', file: 'SET UP.mp4' },
+    { title: 'The Big Setup', file: 'SET UP BIG.mp4' },
+    { title: 'Setup Two', file: 'SET UP 2.mp4' },
+    { title: 'Setup Three', file: 'SET UP 3.mp4' },
+    { title: 'Small Setup', file: 'SMALL SETUP.mp4' },
+    { title: 'Tea Setup', file: 'TEA SETUP.mp4' },
+  ]
+
+  const photos = [
+    'Events and customer displays.jpeg',
+    'Events and customer displays 1.jpeg',
+    'Events and customer displays 2.jpeg',
+    'Events and customer displays 3.jpeg',
+    'Events and customer displays 4.jpeg',
+  ]
+
+  const [activeVideo, setActiveVideo] = useState(0)
+
+  return (
+    <section className="experience-section" id="experience">
+      <div className="experience-heading">
+        <span className="eyebrow">BEYOND THE BOTTLE</span>
+        <h2>The Mirac <span>Experience.</span></h2>
+        <p>From thoughtfully arranged juice stations to refreshing moments shared together, explore how Mirac brings every setup to life.</p>
+      </div>
+
+      <div className="experience-feature">
+        <div className="experience-player">
+          <video key={videos[activeVideo].file} controls playsInline preload="metadata">
+            <source src={`/Videos/${encodeURIComponent(videos[activeVideo].file)}`} type="video/mp4" />
+            Your browser does not support video playback.
+          </video>
+          <span className="experience-video-count">{String(activeVideo + 1).padStart(2, '0')} / 08</span>
+        </div>
+        <div className="experience-feature-copy">
+          <span className="eyebrow">FEATURED EXPERIENCE</span>
+          <h3>{videos[activeVideo].title}</h3>
+          <p>Explore one of the ways Mirac brings refreshing setups and serving experiences together.</p>
+          <span className="experience-watch-label">SELECT A VIDEO TO EXPLORE</span>
+        </div>
+      </div>
+
+      <div className="experience-video-list">
+        {videos.map((video, index) => (
+          <button
+            className={`experience-video-card ${activeVideo === index ? 'active' : ''}`}
+            key={video.file}
+            type="button"
+            onClick={() => setActiveVideo(index)}
+            aria-pressed={activeVideo === index}
+          >
+            <span className="experience-video-number">{String(index + 1).padStart(2, '0')}</span>
+            <span className="experience-video-name">{video.title}</span>
+            <span className="experience-play-icon">â–¶</span>
+          </button>
+        ))}
+      </div>
+
+      <div className="experience-gallery-heading">
+        <div>
+          <span className="eyebrow">REAL MOMENTS. REAL PRESENTATIONS.</span>
+          <h3>Setups & <span>displays.</span></h3>
+        </div>
+        <span className="experience-gallery-count">05 PHOTOGRAPHS</span>
+      </div>
+
+      <div className="experience-photo-grid">
+        {photos.map((photo, index) => (
+          <figure className={`experience-photo experience-photo-${index + 1}`} key={photo}>
+            <img
+              src={`/images/${encodeURIComponent(photo)}`}
+              alt={`Mirac Juice event and customer display ${index + 1}`}
+              loading="lazy"
+            />
+          </figure>
+        ))}
+      </div>
+
+      <div className="experience-cta">
+        <p>Planning a gathering or event?</p>
+        <a href="#contact" className="text-button">LET'S PLAN YOUR SETUP <span>â†—</span></a>
+      </div>
+    </section>
+  )
+}
 
 function App() {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -380,7 +315,7 @@ function App() {
   return (
     <main>
       <div className="announcement">
-        SIMPLE. ORGANIC. HEALTHY. <span>✳</span> FRESHNESS IN EVERY BOTTLE
+        SIMPLE. ORGANIC. HEALTHY. <span>?</span> FRESHNESS IN EVERY BOTTLE
       </div>
 
       <header className="navbar">
@@ -398,7 +333,7 @@ function App() {
           <a href="#about">Our Story</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a className="nav-order" href="#contact">ORDER NOW ↗</a>
+        <a className="nav-order" href="#contact">ORDER NOW ?</a>
       </header>
 
       <section className="cinematic-hero" id="home">
@@ -436,7 +371,7 @@ function App() {
         {/* Layer 4: Hero Content with strong visual hierarchy */}
         <div className="hero-content">
           <div className="hero-brand-pill">
-            <span className="hero-brand-star">✳</span>
+            <span className="hero-brand-star">?</span>
             <span className="hero-eyebrow">SIMPLE. ORGANIC. HEALTHY.</span>
           </div>
 
@@ -452,10 +387,10 @@ function App() {
 
           <div className="hero-actions">
             <a className="primary-button hero-primary-btn" href="#juices">
-              EXPLORE OUR JUICES <span>↗</span>
+              EXPLORE OUR JUICES <span>?</span>
             </a>
             <a className="hero-secondary-btn" href="#packages">
-              DISCOVER OUR PACKAGES <span>↗</span>
+              DISCOVER OUR PACKAGES <span>?</span>
             </a>
           </div>
         </div>
@@ -463,16 +398,16 @@ function App() {
         <div className="hero-bottom">
           <span className="hero-tagline">SIMPLE. ORGANIC. HEALTHY.</span>
           <span className="hero-promise-note">FRESH MOMENTS, BEAUTIFULLY SHARED</span>
-          <a href="#juices" className="hero-scroll-link">SCROLL TO EXPLORE ↓</a>
+          <a href="#juices" className="hero-scroll-link">SCROLL TO EXPLORE ?</a>
         </div>
 
-        <div className="hero-side-note">MADE TO REFRESH · MADE TO SHARE</div>
+        <div className="hero-side-note">MADE TO REFRESH Â· MADE TO SHARE</div>
       </section>
 
       <section className="promise">
-        <div><span>✳</span><strong>Discover our collection</strong></div>
-        <div><span>✳</span><strong>Made for sharing</strong></div>
-        <div><span>✳</span><strong>Moments worth savouring</strong></div>
+        <div><span>?</span><strong>Discover our collection</strong></div>
+        <div><span>?</span><strong>Made for sharing</strong></div>
+        <div><span>?</span><strong>Moments worth savouring</strong></div>
       </section>
 
       <section
@@ -487,7 +422,7 @@ function App() {
       >
         <div className="showcase-masthead">
           <div className="showcase-masthead-meta">
-            <span className="eyebrow">EDITORIAL SHOWCASE · THE MIRAC ARCHIVE</span>
+            <span className="eyebrow">EDITORIAL SHOWCASE Â· THE MIRAC ARCHIVE</span>
             <span className="masthead-divider">/</span>
             <span className="masthead-counter">
               CAMPAIGN {String(currentSlide + 1).padStart(2, '0')} OF {String(showcaseSlides.length).padStart(2, '0')}
@@ -504,7 +439,7 @@ function App() {
                 onClick={goToPrevSlide}
                 aria-label="Previous featured juice"
               >
-                ←
+                ?
               </button>
               <button
                 type="button"
@@ -512,7 +447,7 @@ function App() {
                 onClick={goToNextSlide}
                 aria-label="Next featured juice"
               >
-                →
+                ?
               </button>
             </div>
           </div>
@@ -566,7 +501,7 @@ function App() {
                     aria-hidden={!isActive}
                   >
                     <div className="showcase-kicker">
-                      <span className="kicker-glyph">✳</span>
+                      <span className="kicker-glyph">?</span>
                       <span>{slide.kicker}</span>
                     </div>
 
@@ -578,7 +513,7 @@ function App() {
                     <p className="showcase-story-text">{slide.description}</p>
 
                     <div className="showcase-provenance-tag">
-                      <span className="provenance-accent">●</span>
+                      <span className="provenance-accent">?</span>
                       <span>{slide.provenance}</span>
                     </div>
 
@@ -589,7 +524,7 @@ function App() {
                         aria-label={`Order or enquire about ${slide.name}`}
                       >
                         <span>ORDER / ENQUIRE</span>
-                        <span className="btn-arrow">↗</span>
+                        <span className="btn-arrow">?</span>
                       </a>
                       <a
                         className="showcase-whatsapp-btn"
@@ -625,7 +560,7 @@ function App() {
               </div>
               <div className="showcase-timeline-label">
                 <span className="timeline-slide-name">{showcaseSlides[currentSlide].name}</span>
-                <span className="timeline-hint">Autoplay active · Hover to pause</span>
+                <span className="timeline-hint">Autoplay active Â· Hover to pause</span>
               </div>
             </div>
           </div>
@@ -635,7 +570,7 @@ function App() {
       <section className="products-section" id="juices">
         <div className="section-heading catalogue-heading">
           <div>
-            <span className="eyebrow">THE MIRAC COLLECTION · 16 APPROVED VARIETIES</span>
+            <span className="eyebrow">THE MIRAC COLLECTION Â· 16 APPROVED VARIETIES</span>
             <h2>A flavour for <span>every mood.</span></h2>
             <p>
               Explore our complete collection of 16 fresh, cold-pressed fruit varieties.
@@ -643,7 +578,7 @@ function App() {
             </p>
           </div>
           <div className="catalogue-top-actions">
-            <a className="text-button" href="#contact">ENQUIRE ABOUT OUR JUICES ↗</a>
+            <a className="text-button" href="#contact">ENQUIRE ABOUT OUR JUICES ?</a>
           </div>
         </div>
 
@@ -686,7 +621,7 @@ function App() {
                       <BotanicalEmblem accent={product.palette.accent} />
                     </div>
                     <span className="placeholder-brand">MIRAC JUICE</span>
-                    <span className="placeholder-note">COLD PRESSED · FRESH BATCH</span>
+                    <span className="placeholder-note">A MIRAC JUICE VARIETY</span>
                   </div>
                 )}
               </div>
@@ -700,7 +635,7 @@ function App() {
                     aria-label={`Enquire about ${product.name}`}
                   >
                     <span>ENQUIRE TO ORDER</span>
-                    <span className="action-arrow">↗</span>
+                    <span className="action-arrow">?</span>
                   </a>
                   <a
                     className="product-wa-link"
@@ -720,15 +655,15 @@ function App() {
 
         <div className="catalogue-footer-strip">
           <div className="catalogue-strip-item">
-            <span className="strip-star">✳</span>
+            <span className="strip-star">?</span>
             <span>All 16 varieties prepared fresh upon order</span>
           </div>
           <div className="catalogue-strip-item">
-            <span className="strip-star">✳</span>
+            <span className="strip-star">?</span>
             <span>Available in chilled bottles & catered event dispensers</span>
           </div>
           <div className="catalogue-strip-item">
-            <span className="strip-star">✳</span>
+            <span className="strip-star">?</span>
             <span>Custom selections for gatherings & corporate occasions</span>
           </div>
         </div>
@@ -794,7 +729,7 @@ function App() {
               href="#contact"
               aria-label="Enquire about the Bronze Package"
             >
-              ENQUIRE ↗
+              ENQUIRE ?
             </a>
           </div>
 
@@ -832,14 +767,14 @@ function App() {
               href="#contact"
               aria-label="Enquire about the Silver Package"
             >
-              ENQUIRE ↗
+              ENQUIRE ?
             </a>
           </div>
 
           {/* Exclusive */}
           <div className="package-card package-exclusive">
             <div className="pkg-top">
-              <span className="package-tier-badge exclusive-pill">✳ EXCLUSIVE TIER</span>
+              <span className="package-tier-badge exclusive-pill">? EXCLUSIVE TIER</span>
               <span className="pkg-num">03</span>
             </div>
             <h3 className="pkg-name">Exclusive Package</h3>
@@ -870,20 +805,20 @@ function App() {
               href="#contact"
               aria-label="Enquire about the Exclusive Package"
             >
-              ENQUIRE ↗
+              ENQUIRE ?
             </a>
           </div>
         </div>
 
         <p className="pkg-footnote">
-          <span className="pkg-footnote-star">✳</span>
+          <span className="pkg-footnote-star">?</span>
           Juice is priced per jerrycan. Smoky Juice is an additional optional item. Transport cost depends on venue location.
         </p>
-        <a className="primary-button package-cta" href="#contact">ENQUIRE ABOUT PACKAGES ↗</a>
+        <a className="primary-button package-cta" href="#contact">ENQUIRE ABOUT PACKAGES ?</a>
       </section>
 
       {/* ================================================================
-          MIRAC TEA — TEA & COFFEE CATERING
+          MIRAC TEA â€” TEA & COFFEE CATERING
           ================================================================ */}
       <EventCalculator />
 
@@ -891,7 +826,7 @@ function App() {
         <div className="tea-inner">
           <div className="tea-header">
             <span className="eyebrow">TEA &amp; COFFEE CATERING</span>
-            <h2>Mirac Tea — <span>served with style.</span></h2>
+            <h2>Mirac Tea â€” <span>served with style.</span></h2>
             <p>
               Professional tea and coffee catering for events of all sizes.
               Served by a smartly dressed team with full basic setup included.
@@ -916,14 +851,14 @@ function App() {
                       { guests: '100', price: '1,000,000' },
                       { guests: '150', price: '1,200,000' },
                       { guests: '200', price: '1,600,000' },
-                      { guests: '250–300', price: '2,200,000' },
-                      { guests: '350–400', price: '2,800,000' },
-                      { guests: '450–500', price: '3,400,000' },
-                      { guests: '550–600', price: '4,000,000' },
-                      { guests: '650–700', price: '4,500,000' },
-                      { guests: '750–800', price: '5,200,000' },
-                      { guests: '850–900', price: '5,600,000' },
-                      { guests: '950–1,000', price: '6,500,000' },
+                      { guests: '250â€“300', price: '2,200,000' },
+                      { guests: '350â€“400', price: '2,800,000' },
+                      { guests: '450â€“500', price: '3,400,000' },
+                      { guests: '550â€“600', price: '4,000,000' },
+                      { guests: '650â€“700', price: '4,500,000' },
+                      { guests: '750â€“800', price: '5,200,000' },
+                      { guests: '850â€“900', price: '5,600,000' },
+                      { guests: '950â€“1,000', price: '6,500,000' },
                     ].map((row) => (
                       <tr key={row.guests}>
                         <td>{row.guests}</td>
@@ -943,12 +878,12 @@ function App() {
                   'Black tea',
                   'African milk tea',
                   'Spiced and non-spiced coffee',
-                  'Requested flavours & sweeteners: honey, chocolate, Nescafé, sugar and tea herbs',
+                  'Requested flavours & sweeteners: honey, chocolate, NescafÃ©, sugar and tea herbs',
                   'Smartly dressed serving team',
                   'Basic setup of tables and linen',
                 ].map((item) => (
                   <li key={item}>
-                    <span className="tea-check">✳</span>
+                    <span className="tea-check">?</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -956,14 +891,14 @@ function App() {
 
               <div className="tea-notes">
                 <div className="tea-note-item">
-                  <span className="tea-note-icon">🚗</span>
+                  <span className="tea-note-icon">??</span>
                   <span>Transport costs are covered by the client and depend on venue location.</span>
                 </div>
                 <div className="tea-note-item tea-note-custom">
-                  <span className="tea-note-icon">🎨</span>
+                  <span className="tea-note-icon">??</span>
                   <span>
                     Customised setups matching your event theme and colours are available at an additional{' '}
-                    <strong>UGX 300,000 – 1,000,000</strong>.
+                    <strong>UGX 300,000 â€“ 1,000,000</strong>.
                   </span>
                 </div>
               </div>
@@ -972,31 +907,14 @@ function App() {
                 className="primary-button tea-cta-btn"
                 href="#contact"
               >
-                ENQUIRE ABOUT TEA CATERING ↗
+                ENQUIRE ABOUT TEA CATERING ?
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="about-section" id="about">
-        <img
-          className="about-photo"
-          src="/images/Juice%20in%20glasses%20and%20jugs%201.jpeg"
-          alt="Mirac Juice served in glasses and jugs"
-          loading="lazy"
-        />
-        <div>
-          <span className="eyebrow">WELCOME TO MIRAC JUICE</span>
-          <h2>Simple. Organic. <span>Healthy.</span></h2>
-          <p>
-            We believe good moments deserve refreshing experiences.
-            Discover the Mirac Juice collection and let us be part of
-            your everyday moments and special celebrations.
-          </p>
-          <a className="text-button" href="#contact">GET IN TOUCH ↗</a>
-        </div>
-      </section>
+      <MiracExperience />
 
       <section className="contact-section" id="contact">
         <span className="eyebrow">LET'S MAKE IT REFRESHING</span>
@@ -1013,7 +931,7 @@ function App() {
                 href="tel:+256781838030"
                 aria-label="Call 0781838030"
               >
-                <span>📞</span> Call Now
+                <span>??</span> Call Now
               </a>
               <a
                 className="contact-wa-btn"
@@ -1036,7 +954,7 @@ function App() {
                 href="tel:+256759697018"
                 aria-label="Call 0759697018"
               >
-                <span>📞</span> Call Now
+                <span>??</span> Call Now
               </a>
               <a
                 className="contact-wa-btn"
@@ -1051,7 +969,7 @@ function App() {
           </div>
         </div>
 
-        <p className="contact-tagline">SIMPLE. ORGANIC. HEALTHY. — Mirac Juice Uganda</p>
+        <p className="contact-tagline">SIMPLE. ORGANIC. HEALTHY. â€” Mirac Juice Uganda</p>
       </section>
 
       <footer>
@@ -1061,12 +979,18 @@ function App() {
           alt="Mirac Juice"
         />
         <p>Fresh moments. Beautifully shared.</p>
-        <span>© {new Date().getFullYear()} Mirac Juice. All rights reserved.</span>
+        <span>Â© {new Date().getFullYear()} Mirac Juice. All rights reserved.</span>
       </footer>
     </main>
   )
 }
 
 export default App
+
+
+
+
+
+
 
 
