@@ -79,9 +79,13 @@ function WhatsAppIcon() {
 }
 
 const gallery = [
-  { image: '/images/Juice%20bottles%201.jpeg', title: 'Our juice collection' },
-  { image: '/images/Juice%20in%20glasses%20and%20jugs.jpeg', title: 'Fresh moments' },
-  { image: '/images/Events%20and%20customer%20displays.jpeg', title: 'Made for sharing' },
+  { image: '/images/Juice%20bottles%201.jpeg', title: 'Our Juice Collection' },
+  { image: '/images/Juice%20in%20glasses%20and%20jugs.jpeg', title: 'Fresh Juice Moments' },
+  { image: '/images/Events%20and%20customer%20displays.jpeg', title: 'Our Juice Displays' },
+  { image: '/images/Events%20and%20customer%20displays%201.jpeg', title: 'Made for Sharing' },
+  { image: '/images/Events%20and%20customer%20displays%202.jpeg', title: 'Fresh Event Setups' },
+  { image: '/images/Events%20and%20customer%20displays%203.jpeg', title: 'Serving Every Occasion' },
+  { image: '/images/Events%20and%20customer%20displays%204.jpeg', title: 'Mirac at Your Events' },
 ]
 
 interface ShowcaseSlide {
@@ -100,65 +104,65 @@ interface ShowcaseSlide {
 const showcaseSlides: ShowcaseSlide[] = [
   {
     id: 'mango-juice',
-    kicker: '01 Â· SIGNATURE SELECTION',
+    kicker: '01 · SIGNATURE SELECTION',
     titleLine1: 'Sun-Ripened',
     titleLine2: 'Mango Nectar.',
     name: 'Pure Mango Juice',
     description:
       'Chilled fresh mango juice prepared with tropical mangoes for a naturally sweet, velvet-smooth and revitalizing fruit experience.',
-    provenance: 'Bottled fresh daily Â· Served chilled',
+    provenance: 'Bottled fresh daily · Served chilled',
     image: '/images/Juice%20bottles%206.jpeg',
     alt: 'Chilled bottle of Mirac Mango Juice held fresh in hand with natural condensation',
     whatsappMessage: 'Hello Mirac Juice, I would like to order the Mango Juice.',
   },
   {
     id: 'milk-meld',
-    kicker: '02 Â· HOUSE SPECIALTY',
+    kicker: '02 · HOUSE SPECIALTY',
     titleLine1: 'The Celebrated',
     titleLine2: 'Mirac Milk Meld.',
     name: 'Mirac Milk Meld',
     description:
       'Our beloved signature house creation, carefully blended for an exceptionally creamy, velvety texture and wholesome tropical sweetness.',
-    provenance: 'Signature house recipe Â· Bottled fresh',
+    provenance: 'Signature house recipe · Bottled fresh',
     image: '/images/Juice%20bottles%202.jpeg',
     alt: 'Three bottles of authentic Mirac Milk Meld on display',
     whatsappMessage: 'Hello Mirac Juice, I would like to order the Mirac Milk Meld.',
   },
   {
     id: 'mango-beetroot',
-    kicker: '03 Â· ARTISANAL DUO',
+    kicker: '03 · ARTISANAL DUO',
     titleLine1: 'Artisanal Layered',
     titleLine2: 'Mango & Beetroot.',
     name: 'Layered Mango Beetroot',
     description:
       'A striking visual and flavour duo, layering fresh earthy beetroot beneath smooth, sweet mango smoothie for a vibrant fruit lift.',
-    provenance: 'Hand-layered specialty Â· Prepared to order',
+    provenance: 'Hand-layered specialty · Prepared to order',
     image: '/images/Juice%20in%20glasses%20and%20jugs%201.jpeg',
     alt: 'Two-tone layered mango and beetroot drink in takeaway cup with pitcher',
     whatsappMessage: 'Hello Mirac Juice, I would like to order the Layered Mango Beetroot.',
   },
   {
     id: 'citrus-harvest',
-    kicker: '04 Â· FARM FRESH',
+    kicker: '04 · FARM FRESH',
     titleLine1: 'Sun-Drenched',
     titleLine2: 'Citrus Harvest.',
     name: 'Citrus Harvest',
     description:
       'Chilled citrus juice prepared from ripe oranges and citrus fruits, bringing bright, crisp zest and natural sunshine to every bottle.',
-    provenance: 'Whole ripe citrus fruits Â· Refreshing zest',
+    provenance: 'Whole ripe citrus fruits · Refreshing zest',
     image: '/images/Juice%20in%20glasses%20and%20jugs.jpeg',
     alt: 'Chilled bottle of Mirac citrus juice resting on vibrant green grass surrounded by oranges',
     whatsappMessage: 'Hello Mirac Juice, I would like to order the Citrus Harvest.',
   },
   {
     id: 'bottle-collection',
-    kicker: '05 Â· BOTTLE LINEUP',
+    kicker: '05 · BOTTLE LINEUP',
     titleLine1: 'Freshly Bottled.',
     titleLine2: 'Made to Share.',
     name: 'The Mirac Collection',
     description:
       'From daily breakfast refreshment to catering setups, explore our range of freshly prepared juices bottled daily for any occasion.',
-    provenance: '16 approved varieties Â· Dispensers & bottles',
+    provenance: '16 approved varieties · Dispensers & bottles',
     image: '/images/Juice%20bottles%201.jpeg',
     alt: 'Trio of authentic colourful Mirac Juice bottles on display',
     whatsappMessage: 'Hello Mirac Juice, I would like to enquire about ordering juice bottles.',
@@ -167,23 +171,16 @@ const showcaseSlides: ShowcaseSlide[] = [
 
 function MiracExperience() {
   const videos = [
-    { title: 'The Mirac Introduction', file: 'INTRODUCTION SET UP.mp4' },
-    { title: 'The Main Smoky Setup', file: 'MAIN SMOKY.mp4' },
-    { title: 'The Mirac Setup', file: 'SET UP.mp4' },
-    { title: 'The Big Setup', file: 'SET UP BIG.mp4' },
-    { title: 'Setup Two', file: 'SET UP 2.mp4' },
-    { title: 'Setup Three', file: 'SET UP 3.mp4' },
-    { title: 'Small Setup', file: 'SMALL SETUP.mp4' },
-    { title: 'Tea Setup', file: 'TEA SETUP.mp4' },
+    { title: 'Mirac Introduction', file: 'INTRODUCTION SET UP.mp4' },
+    { title: 'Smoky Juice Setup', file: 'MAIN SMOKY.mp4' },
+    { title: 'Juice Serving Setup', file: 'SET UP.mp4' },
+    { title: 'Large Event Setup', file: 'SET UP BIG.mp4' },
+    { title: 'Event Setup Two', file: 'SET UP 2.mp4' },
+    { title: 'Event Setup Three', file: 'SET UP 3.mp4' },
+    { title: 'Small Event Setup', file: 'SMALL SETUP.mp4' },
+    { title: 'Tea & Coffee Setup', file: 'TEA SETUP.mp4' },
   ]
 
-  const photos = [
-    'Events and customer displays.jpeg',
-    'Events and customer displays 1.jpeg',
-    'Events and customer displays 2.jpeg',
-    'Events and customer displays 3.jpeg',
-    'Events and customer displays 4.jpeg',
-  ]
 
   const [activeVideo, setActiveVideo] = useState(0)
 
@@ -222,34 +219,15 @@ function MiracExperience() {
           >
             <span className="experience-video-number">{String(index + 1).padStart(2, '0')}</span>
             <span className="experience-video-name">{video.title}</span>
-            <span className="experience-play-icon">â–¶</span>
+            <span className="experience-play-icon">▶</span>
           </button>
         ))}
       </div>
 
-      <div className="experience-gallery-heading">
-        <div>
-          <span className="eyebrow">REAL MOMENTS. REAL PRESENTATIONS.</span>
-          <h3>Setups & <span>displays.</span></h3>
-        </div>
-        <span className="experience-gallery-count">05 PHOTOGRAPHS</span>
-      </div>
-
-      <div className="experience-photo-grid">
-        {photos.map((photo, index) => (
-          <figure className={`experience-photo experience-photo-${index + 1}`} key={photo}>
-            <img
-              src={`/images/${encodeURIComponent(photo)}`}
-              alt={`Mirac Juice event and customer display ${index + 1}`}
-              loading="lazy"
-            />
-          </figure>
-        ))}
-      </div>
 
       <div className="experience-cta">
         <p>Planning a gathering or event?</p>
-        <a href="#contact" className="text-button">LET'S PLAN YOUR SETUP <span>â†—</span></a>
+        <a href="#contact" className="text-button">LET'S PLAN YOUR SETUP <span>↗</span></a>
       </div>
     </section>
   )
@@ -259,10 +237,29 @@ function App() {
   const videoRef = useRef<HTMLVideoElement>(null)
   const [videoLoaded, setVideoLoaded] = useState(false)
   const [videoError, setVideoError] = useState(false)
+  const [heroVideoEnded, setHeroVideoEnded] = useState(false)
+  const [heroSlide, setHeroSlide] = useState(0)
+  const heroBottleImages = ['/images/Juice%20bottles%201.jpeg', '/images/Juice%20bottles%203.jpeg', '/images/Juice%20bottles%204.jpeg', '/images/Juice%20bottles%205.jpeg', '/images/Juice%20bottles%206.jpeg']
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [gallerySlide, setGallerySlide] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
   const [touchStart, setTouchStart] = useState<number | null>(null)
   const [touchEnd, setTouchEnd] = useState<number | null>(null)
+
+  useEffect(() => {
+    if (!heroVideoEnded) return
+    const timer = setInterval(() => {
+      setHeroSlide((prev) => (prev + 1) % heroBottleImages.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [heroVideoEnded])
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setGallerySlide((prev) => (prev + 1) % gallery.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
 
   useEffect(() => {
     if (videoRef.current) {
@@ -315,7 +312,7 @@ function App() {
   return (
     <main>
       <div className="announcement">
-        SIMPLE. ORGANIC. HEALTHY. <span>?</span> FRESHNESS IN EVERY BOTTLE
+        SIMPLE. ORGANIC. HEALTHY. <span aria-hidden="true">&#8226;</span> FRESHNESS IN EVERY BOTTLE
       </div>
 
       <header className="navbar">
@@ -333,10 +330,10 @@ function App() {
           <a href="#about">Our Story</a>
           <a href="#contact">Contact</a>
         </nav>
-        <a className="nav-order" href="#contact">ORDER NOW ?</a>
+        <a className="nav-order" href="#contact">ORDER NOW &#8594;</a>
       </header>
 
-      <section className="cinematic-hero" id="home">
+      <section className={`cinematic-hero ${heroVideoEnded ? 'video-ended' : ''} `} id="home">
         {/* Layer 1: Authentic Mirac Juice photograph fallback */}
         <div
           className={`hero-fallback-bg ${videoLoaded && !videoError ? 'video-active' : ''}`}
@@ -351,12 +348,12 @@ function App() {
             className="hero-video"
             autoPlay
             muted
-            loop
             playsInline
             preload="metadata"
             poster="/images/Juice%20bottles%201.jpeg"
             onCanPlay={() => setVideoLoaded(true)}
             onError={() => setVideoError(true)}
+            onEnded={() => setHeroVideoEnded(true)}
             aria-hidden="true"
           >
             <source src="/Videos/MAIN%20SMOKY.mp4" type="video/mp4" />
@@ -365,13 +362,22 @@ function App() {
           </video>
         )}
 
-        {/* Layer 3: Balanced dark gradient overlay */}
+        <div className={`hero-slideshow ${heroVideoEnded ? 'is-visible' : ''}`} aria-hidden="true">
+          {heroBottleImages.map((image, index) => (
+            <div
+              key={image}
+              className={`hero-slide ${heroSlide === index ? 'active' : ''}`}
+              style={{ backgroundImage: `url('${image}')` }}
+            />
+          ))}
+        </div>
+{/* Layer 3: Balanced dark gradient overlay */}
         <div className="hero-shade" aria-hidden="true" />
 
         {/* Layer 4: Hero Content with strong visual hierarchy */}
         <div className="hero-content">
           <div className="hero-brand-pill">
-            <span className="hero-brand-star">?</span>
+            <span className="hero-brand-star">&#8226;</span>
             <span className="hero-eyebrow">SIMPLE. ORGANIC. HEALTHY.</span>
           </div>
 
@@ -387,10 +393,10 @@ function App() {
 
           <div className="hero-actions">
             <a className="primary-button hero-primary-btn" href="#juices">
-              EXPLORE OUR JUICES <span>?</span>
+              EXPLORE OUR JUICES <span aria-hidden="true">&#8226;</span>
             </a>
             <a className="hero-secondary-btn" href="#packages">
-              DISCOVER OUR PACKAGES <span>?</span>
+              DISCOVER OUR PACKAGES <span aria-hidden="true">&#8226;</span>
             </a>
           </div>
         </div>
@@ -398,16 +404,16 @@ function App() {
         <div className="hero-bottom">
           <span className="hero-tagline">SIMPLE. ORGANIC. HEALTHY.</span>
           <span className="hero-promise-note">FRESH MOMENTS, BEAUTIFULLY SHARED</span>
-          <a href="#juices" className="hero-scroll-link">SCROLL TO EXPLORE ?</a>
+          <a href="#juices" className="hero-scroll-link">SCROLL TO EXPLORE</a>
         </div>
 
-        <div className="hero-side-note">MADE TO REFRESH Â· MADE TO SHARE</div>
+        <div className="hero-side-note">MADE TO REFRESH · MADE TO SHARE</div>
       </section>
 
       <section className="promise">
-        <div><span>?</span><strong>Discover our collection</strong></div>
-        <div><span>?</span><strong>Made for sharing</strong></div>
-        <div><span>?</span><strong>Moments worth savouring</strong></div>
+        <div><span aria-hidden="true">&#8226;</span><strong>Discover our collection</strong></div>
+        <div><span aria-hidden="true">&#8226;</span><strong>Made for sharing</strong></div>
+        <div><span aria-hidden="true">&#8226;</span><strong>Moments worth savouring</strong></div>
       </section>
 
       <section
@@ -422,7 +428,7 @@ function App() {
       >
         <div className="showcase-masthead">
           <div className="showcase-masthead-meta">
-            <span className="eyebrow">EDITORIAL SHOWCASE Â· THE MIRAC ARCHIVE</span>
+            <span className="eyebrow">EDITORIAL SHOWCASE · THE MIRAC ARCHIVE</span>
             <span className="masthead-divider">/</span>
             <span className="masthead-counter">
               CAMPAIGN {String(currentSlide + 1).padStart(2, '0')} OF {String(showcaseSlides.length).padStart(2, '0')}
@@ -501,7 +507,7 @@ function App() {
                     aria-hidden={!isActive}
                   >
                     <div className="showcase-kicker">
-                      <span className="kicker-glyph">?</span>
+                      <span className="kicker-glyph">&#8226;</span>
                       <span>{slide.kicker}</span>
                     </div>
 
@@ -513,7 +519,7 @@ function App() {
                     <p className="showcase-story-text">{slide.description}</p>
 
                     <div className="showcase-provenance-tag">
-                      <span className="provenance-accent">?</span>
+                      <span className="provenance-accent">&#8226;</span>
                       <span>{slide.provenance}</span>
                     </div>
 
@@ -524,7 +530,7 @@ function App() {
                         aria-label={`Order or enquire about ${slide.name}`}
                       >
                         <span>ORDER / ENQUIRE</span>
-                        <span className="btn-arrow">?</span>
+                        <span className="btn-arrow">&#8594;</span>
                       </a>
                       <a
                         className="showcase-whatsapp-btn"
@@ -560,7 +566,7 @@ function App() {
               </div>
               <div className="showcase-timeline-label">
                 <span className="timeline-slide-name">{showcaseSlides[currentSlide].name}</span>
-                <span className="timeline-hint">Autoplay active Â· Hover to pause</span>
+                <span className="timeline-hint">Autoplay active · Hover to pause</span>
               </div>
             </div>
           </div>
@@ -570,7 +576,7 @@ function App() {
       <section className="products-section" id="juices">
         <div className="section-heading catalogue-heading">
           <div>
-            <span className="eyebrow">THE MIRAC COLLECTION Â· 16 APPROVED VARIETIES</span>
+            <span className="eyebrow">THE MIRAC COLLECTION · 16 APPROVED VARIETIES</span>
             <h2>A flavour for <span>every mood.</span></h2>
             <p>
               Explore our complete collection of 16 fresh, cold-pressed fruit varieties.
@@ -635,7 +641,7 @@ function App() {
                     aria-label={`Enquire about ${product.name}`}
                   >
                     <span>ENQUIRE TO ORDER</span>
-                    <span className="action-arrow">?</span>
+                    <span className="action-arrow">&#8594;</span>
                   </a>
                   <a
                     className="product-wa-link"
@@ -655,35 +661,71 @@ function App() {
 
         <div className="catalogue-footer-strip">
           <div className="catalogue-strip-item">
-            <span className="strip-star">?</span>
+            <span className="strip-star">&#8226;</span>
             <span>All 16 varieties prepared fresh upon order</span>
           </div>
           <div className="catalogue-strip-item">
-            <span className="strip-star">?</span>
+            <span className="strip-star">&#8226;</span>
             <span>Available in chilled bottles & catered event dispensers</span>
           </div>
           <div className="catalogue-strip-item">
-            <span className="strip-star">?</span>
+            <span className="strip-star">&#8226;</span>
             <span>Custom selections for gatherings & corporate occasions</span>
           </div>
         </div>
       </section>
 
-      <section className="gallery-section">
+      <section className="gallery-section" id="gallery">
         <div className="section-heading">
           <div>
             <span className="eyebrow">A TASTE OF MIRAC</span>
             <h2>Freshness in <span>every moment.</span></h2>
-            <p>Real Mirac Juice moments, presentations and experiences.</p>
+            <p>Explore our juices, displays and memorable moments.</p>
           </div>
         </div>
-        <div className="gallery-grid">
-          {gallery.map((item) => (
-            <article className="gallery-card" key={item.title}>
-              <img src={item.image} alt={item.title} loading="lazy" />
-              <h3>{item.title}</h3>
-            </article>
-          ))}
+
+        <div className="unified-gallery">
+          <div className="unified-gallery-stage">
+            {gallery.map((item, index) => (
+              <div
+                className={`unified-gallery-slide ${gallerySlide === index ? 'active' : ''}`}
+                key={item.title}
+                aria-hidden={gallerySlide !== index}
+              >
+                <img src={item.image} alt={item.title} />
+                <div className="unified-gallery-caption">
+                  <span>{String(index + 1).padStart(2, '0')} / {String(gallery.length).padStart(2, '0')}</span>
+                  <h3>{item.title}</h3>
+                </div>
+              </div>
+            ))}
+
+            <button
+              className="unified-gallery-arrow previous"
+              type="button"
+              aria-label="Previous photograph"
+              onClick={() => setGallerySlide((prev) => (prev - 1 + gallery.length) % gallery.length)}
+            >&#8592;</button>
+            <button
+              className="unified-gallery-arrow next"
+              type="button"
+              aria-label="Next photograph"
+              onClick={() => setGallerySlide((prev) => (prev + 1) % gallery.length)}
+            >&#8594;</button>
+          </div>
+
+          <div className="unified-gallery-dots" aria-label="Choose photograph">
+            {gallery.map((item, index) => (
+              <button
+                key={item.title}
+                type="button"
+                className={gallerySlide === index ? 'active' : ''}
+                aria-label={`Show photograph ${index + 1}: ${item.title}`}
+                aria-pressed={gallerySlide === index}
+                onClick={() => setGallerySlide(index)}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -729,7 +771,7 @@ function App() {
               href="#contact"
               aria-label="Enquire about the Bronze Package"
             >
-              ENQUIRE ?
+              ENQUIRE &#8594;
             </a>
           </div>
 
@@ -767,14 +809,14 @@ function App() {
               href="#contact"
               aria-label="Enquire about the Silver Package"
             >
-              ENQUIRE ?
+              ENQUIRE &#8594;
             </a>
           </div>
 
           {/* Exclusive */}
           <div className="package-card package-exclusive">
             <div className="pkg-top">
-              <span className="package-tier-badge exclusive-pill">? EXCLUSIVE TIER</span>
+              <span className="package-tier-badge exclusive-pill">EXCLUSIVE TIER</span>
               <span className="pkg-num">03</span>
             </div>
             <h3 className="pkg-name">Exclusive Package</h3>
@@ -805,20 +847,20 @@ function App() {
               href="#contact"
               aria-label="Enquire about the Exclusive Package"
             >
-              ENQUIRE ?
+              ENQUIRE &#8594;
             </a>
           </div>
         </div>
 
         <p className="pkg-footnote">
-          <span className="pkg-footnote-star">?</span>
+          <span className="pkg-footnote-star">&#8226;</span>
           Juice is priced per jerrycan. Smoky Juice is an additional optional item. Transport cost depends on venue location.
         </p>
         <a className="primary-button package-cta" href="#contact">ENQUIRE ABOUT PACKAGES ?</a>
       </section>
 
       {/* ================================================================
-          MIRAC TEA â€” TEA & COFFEE CATERING
+          MIRAC TEA — TEA & COFFEE CATERING
           ================================================================ */}
       <EventCalculator />
 
@@ -826,7 +868,7 @@ function App() {
         <div className="tea-inner">
           <div className="tea-header">
             <span className="eyebrow">TEA &amp; COFFEE CATERING</span>
-            <h2>Mirac Tea â€” <span>served with style.</span></h2>
+            <h2>Mirac Tea — <span>served with style.</span></h2>
             <p>
               Professional tea and coffee catering for events of all sizes.
               Served by a smartly dressed team with full basic setup included.
@@ -851,14 +893,14 @@ function App() {
                       { guests: '100', price: '1,000,000' },
                       { guests: '150', price: '1,200,000' },
                       { guests: '200', price: '1,600,000' },
-                      { guests: '250â€“300', price: '2,200,000' },
-                      { guests: '350â€“400', price: '2,800,000' },
-                      { guests: '450â€“500', price: '3,400,000' },
-                      { guests: '550â€“600', price: '4,000,000' },
-                      { guests: '650â€“700', price: '4,500,000' },
-                      { guests: '750â€“800', price: '5,200,000' },
-                      { guests: '850â€“900', price: '5,600,000' },
-                      { guests: '950â€“1,000', price: '6,500,000' },
+                      { guests: '250–300', price: '2,200,000' },
+                      { guests: '350–400', price: '2,800,000' },
+                      { guests: '450–500', price: '3,400,000' },
+                      { guests: '550–600', price: '4,000,000' },
+                      { guests: '650–700', price: '4,500,000' },
+                      { guests: '750–800', price: '5,200,000' },
+                      { guests: '850–900', price: '5,600,000' },
+                      { guests: '950–1,000', price: '6,500,000' },
                     ].map((row) => (
                       <tr key={row.guests}>
                         <td>{row.guests}</td>
@@ -878,12 +920,12 @@ function App() {
                   'Black tea',
                   'African milk tea',
                   'Spiced and non-spiced coffee',
-                  'Requested flavours & sweeteners: honey, chocolate, NescafÃ©, sugar and tea herbs',
+                  'Requested flavours & sweeteners: honey, chocolate, Nescafé, sugar and tea herbs',
                   'Smartly dressed serving team',
                   'Basic setup of tables and linen',
                 ].map((item) => (
                   <li key={item}>
-                    <span className="tea-check">?</span>
+                    <span className="tea-check">&#10003;</span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -891,14 +933,14 @@ function App() {
 
               <div className="tea-notes">
                 <div className="tea-note-item">
-                  <span className="tea-note-icon">??</span>
+                  <span className="tea-note-icon" aria-hidden="true">&#8226;</span>
                   <span>Transport costs are covered by the client and depend on venue location.</span>
                 </div>
                 <div className="tea-note-item tea-note-custom">
-                  <span className="tea-note-icon">??</span>
+                  <span className="tea-note-icon" aria-hidden="true">&#8226;</span>
                   <span>
                     Customised setups matching your event theme and colours are available at an additional{' '}
-                    <strong>UGX 300,000 â€“ 1,000,000</strong>.
+                    <strong>UGX 300,000 – 1,000,000</strong>.
                   </span>
                 </div>
               </div>
@@ -931,7 +973,7 @@ function App() {
                 href="tel:+256781838030"
                 aria-label="Call 0781838030"
               >
-                <span>??</span> Call Now
+                Call Now
               </a>
               <a
                 className="contact-wa-btn"
@@ -954,7 +996,7 @@ function App() {
                 href="tel:+256759697018"
                 aria-label="Call 0759697018"
               >
-                <span>??</span> Call Now
+                Call Now
               </a>
               <a
                 className="contact-wa-btn"
@@ -969,7 +1011,7 @@ function App() {
           </div>
         </div>
 
-        <p className="contact-tagline">SIMPLE. ORGANIC. HEALTHY. â€” Mirac Juice Uganda</p>
+        <p className="contact-tagline">SIMPLE. ORGANIC. HEALTHY. — Mirac Juice Uganda</p>
       </section>
 
       <footer>
@@ -979,13 +1021,14 @@ function App() {
           alt="Mirac Juice"
         />
         <p>Fresh moments. Beautifully shared.</p>
-        <span>Â© {new Date().getFullYear()} Mirac Juice. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} Mirac Juice. All rights reserved.</span>
       </footer>
     </main>
   )
 }
 
 export default App
+
 
 
 
